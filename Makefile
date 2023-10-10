@@ -10,6 +10,3 @@ local:
 
 start:
 	poetry run gunicorn task_manager.wsgi
-
-build:
-	./build.sh
