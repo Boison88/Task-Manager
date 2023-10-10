@@ -6,3 +6,6 @@ This repository was created as part of a [Hexlet study project](https://ru.hexle
 
 *Task Manager* this is a task management system based on the Django framework.  
 It allows you to set tasks, assign performers and change their statuses.
+
+### Try the project in work [HERE](https://task-manager-x2gg.onrender.com)
+
