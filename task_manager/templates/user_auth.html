@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<h1 class="my-4" >{% trans 'Login' %}</h1>
+<h1 class="my-4" >{% trans "Log in" %}</h1>
 <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
         {% bootstrap_form form %}

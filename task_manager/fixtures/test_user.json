@@ -1,0 +1,16 @@
+{
+    "new_valid": {
+      "username": "Mountain",
+      "first_name": "Gregor",
+      "last_name": "Clegane",
+      "password1": "L@nn1ster",
+      "password2": "L@nn1ster"
+    },
+    "new_not_valid": {
+      "username": "Mountai",
+      "first_name": "Gregor",
+      "last_name": "Clegane",
+      "password1": "L@nn1ster",
+      "password2": "L@nn1ster"
+    }
+  }

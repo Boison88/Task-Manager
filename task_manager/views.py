@@ -9,7 +9,6 @@ from django.contrib import messages
 
 class IndexView(SuccessMessageMixin, TemplateView):
     template_name = 'index.html'
-    success_message = 'sdada'
 
 
 class UserLoginView(SuccessMessageMixin, LoginView):
