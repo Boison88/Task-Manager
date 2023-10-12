@@ -2,6 +2,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 import dj_database_url
+from django.urls import reverse_lazy
 
 load_dotenv()
 
@@ -47,6 +48,8 @@ INSTALLED_APPS = [
     'task_manager',
     'task_manager.apps.users.apps.UsersConfig',
     'task_manager.apps.statuses.apps.StatusesConfig',
+    'task_manager.apps.tasks.apps.TasksConfig',
+    'task_manager.apps.labels.apps.LabelsConfig',
 ]
 
 MIDDLEWARE = [
@@ -110,6 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
         }
     },
 ]
+
+LOGIN_URL = reverse_lazy('login')
 
 AUTH_USER_MODEL = 'users.User'
 

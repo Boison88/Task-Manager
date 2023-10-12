@@ -8,7 +8,7 @@ from .models import Status
 from task_manager.mixins import UserAuthenticateMixin
 
 
-class StatusListView(ListView):
+class StatusListView(UserAuthenticateMixin, ListView):
     model = Status
     context_object_name = 'statuses'
     template_name = 'statuses/main.html'

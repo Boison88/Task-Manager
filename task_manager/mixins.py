@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.contrib import messages
 from django.shortcuts import redirect
+from django.db.models import ProtectedError
 
 
 class UserAuthenticateMixin(LoginRequiredMixin):
@@ -10,9 +11,11 @@ class UserAuthenticateMixin(LoginRequiredMixin):
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
-            self.permission_denied_message = _('You are not authorized!'
-                                               'Please sign in.')
-            self.permission_forwarded_url = reverse_lazy('login')
+            messages.error(
+                request,
+                _('You are not authorized! Please sign in.'),
+            )
+            return redirect(reverse_lazy('login'))
 
         return super().dispatch(request, *args, **kwargs)
 
@@ -29,3 +32,21 @@ class CheckUserPermissionMixin(UserPassesTestMixin):
     def handle_no_permission(self):
         messages.error(self.request, self.get_permission_denied_message())
         return redirect(self.permission_forwarded_url)
+
+
+class CheckTaskAuthorPermissionMixin(CheckUserPermissionMixin):
+    def test_func(self):
+        return self.get_object().author == self.request.user
+
+
+class DeleteRestrictionMixin:
+
+    rejection_message = ''
+    rejection_next_url = ''
+
+    def post(self, request, *args, **kwargs):
+        try:
+            return super().post(request, *args, **kwargs)
+        except ProtectedError:
+            messages.error(request, self.rejection_message)
+            return redirect(self.rejection_next_url)
