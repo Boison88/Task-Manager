@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     'task_manager',
     'task_manager.apps.users.apps.UsersConfig',
+    'task_manager.apps.statuses.apps.StatusesConfig',
 ]
 
 MIDDLEWARE = [

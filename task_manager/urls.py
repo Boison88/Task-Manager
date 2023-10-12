@@ -8,4 +8,5 @@ urlpatterns = [
     path('login/', UserLoginView.as_view(), name='login'),
     path('logout/', UserLogoutView.as_view(), name='logout'),
     path('users/', include('task_manager.apps.users.urls')),
+    path('statuses/', include('task_manager.apps.statuses.urls')),
 ]

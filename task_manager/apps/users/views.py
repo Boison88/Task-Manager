@@ -6,7 +6,6 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from .forms import NewUserCreationForm, UpdateForm
 from task_manager.mixins import UserAuthenticateMixin, CheckUserPermissionMixin
-from .models import User
 
 
 class UserListView(SuccessMessageMixin, ListView):
@@ -15,7 +14,7 @@ class UserListView(SuccessMessageMixin, ListView):
     template_name = 'users/main.html'
 
 class UserCreateView(SuccessMessageMixin, CreateView):
-    model = User
+    model = get_user_model()
     form_class = NewUserCreationForm
     template_name = 'users/create.html'
     success_url = reverse_lazy('login')
