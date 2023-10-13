@@ -1,6 +1,7 @@
 ## Study project #4 — «Task Manager»  
 
 [![Actions Status](https://github.com/Boison88/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Boison88/python-project-52/actions)
+[![CI](https://github.com/Boison88/python-project-83/actions/workflows/CI.yml/badge.svg)](https://github.com/Boison88/python-project-83/actions/workflows/CI.yml)
 
 This repository was created as part of a [Hexlet study project](https://ru.hexlet.io/programs/python/projects/52).
 
