@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Task Manager web-application based on the Django framework."
+description = "Study project on Django - Task Manager."
 authors = ["boison <boison88@mail.ru>"]
 readme = "README.md"
 packages = [{include = "task_manager"}]
