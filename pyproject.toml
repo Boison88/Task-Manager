@@ -10,6 +10,7 @@ packages = [{include = "task_manager"}]
 python = "^3.10"
 gunicorn = "^20.1.0"
 python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.6"
 django-bootstrap5 = "^23.3"
 whitenoise = "^6.5.0"
 dj-database-url = "^2.0.0"
