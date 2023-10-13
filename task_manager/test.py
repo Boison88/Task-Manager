@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django import test
 from django.test import TestCase, Client
 from django.urls import reverse
 
@@ -19,6 +20,9 @@ class MainAuthTestCase(TestCase):
         self.user = get_user_model().objects.create_user(**self.credentials)
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class MainPageTestCase(MainAuthTestCase):
     def test_index_view(self):
         response = self.client.get(self.index_url)
@@ -32,7 +36,7 @@ class LoginLogoutTestCase(MainAuthTestCase):
         response = self.client.get(self.login_url)
 
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'authenticate/user_auth.html')
+        self.assertTemplateUsed(response, 'user_auth.html')
 
     def test_login(self):
         test_login = self.client.login(**self.credentials)
