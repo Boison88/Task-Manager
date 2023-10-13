@@ -1,7 +1,7 @@
 from pathlib import Path
 from dotenv import load_dotenv
 import os
-# import dj_database_url
+import dj_database_url
 from django.urls import reverse_lazy
 
 load_dotenv()
@@ -104,8 +104,8 @@ DATABASES = {
 }
 
 # Add database url (live)
-# db_from_env = dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db_from_env)
+
+DATABASES['default'].update(dj_database_url.config(conn_max_age=600))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
