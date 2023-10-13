@@ -2,6 +2,8 @@
 
 [![Actions Status](https://github.com/Boison88/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Boison88/python-project-52/actions)
 [![CI](https://github.com/Boison88/python-project-83/actions/workflows/CI.yml/badge.svg)](https://github.com/Boison88/python-project-83/actions/workflows/CI.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/88d76722c4af7dcbd032/maintainability)](https://codeclimate.com/github/Boison88/python-project-52/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/88d76722c4af7dcbd032/test_coverage)](https://codeclimate.com/github/Boison88/python-project-52/test_coverage)
 
 This repository was created as part of a [Hexlet study project](https://ru.hexlet.io/programs/python/projects/52).
 
