@@ -3,7 +3,6 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 class NewUserCreationForm(UserCreationForm):
-    """Class to register new user with required fields."""
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -15,7 +14,9 @@ class NewUserCreationForm(UserCreationForm):
         fields = ('first_name', 'last_name', 'username',
                   'password1', 'password2')
 
+
 class UpdateForm(NewUserCreationForm):
+
     def clean_username(self):
         username = self.cleaned_data.get('username')
         return username

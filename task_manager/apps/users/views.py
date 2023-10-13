@@ -17,6 +17,7 @@ class UserListView(SuccessMessageMixin, ListView):
     context_object_name = 'users'
     template_name = 'users/main.html'
 
+
 class UserCreateView(SuccessMessageMixin, CreateView):
     model = get_user_model()
     form_class = NewUserCreationForm
@@ -32,6 +33,7 @@ class UserCreateView(SuccessMessageMixin, CreateView):
                        message=_(
                            "Unsuccessful registration. Invalid information."))
         return super().form_invalid(form)
+
 
 class UserUpdateView(UserAuthenticateMixin, CheckUserPermissionMixin,
                      SuccessMessageMixin, UpdateView):
