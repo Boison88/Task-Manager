@@ -7,7 +7,6 @@ from django.db.models import ProtectedError
 
 
 class UserAuthenticateMixin(LoginRequiredMixin):
-    """Verify that the current user is authenticated."""
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
@@ -21,7 +20,6 @@ class UserAuthenticateMixin(LoginRequiredMixin):
 
 
 class CheckUserPermissionMixin(UserPassesTestMixin):
-    """Verify user permissions."""
     permission_denied_message = ''
     permission_forwarded_url = ''
 
