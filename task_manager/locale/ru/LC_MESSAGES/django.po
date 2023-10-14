@@ -378,7 +378,7 @@ msgid "Edit user"
 msgstr "Изменение пользователя"
 
 #: task_manager/views.py:18
-msgid "You are logged in"
+msgid "You're logged in"
 msgstr "Вы залогинены"
 
 #: task_manager/views.py:23 task_manager/views.py:26

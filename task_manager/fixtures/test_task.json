@@ -1,7 +1,7 @@
 {
     "new_valid": {
-      "name": "Space flight",
-      "description": "Off we go!",
+      "name": "Win the throne",
+      "description": "Go! Now!",
       "executor": 1,
       "status": 10
     },
@@ -12,7 +12,7 @@
       "status": ""
     },
     "existing": {
-      "name": "Need to check the rocket",
+      "name": "Attack the neighbors!",
       "description": "",
       "executor": 2,
       "status": 11
