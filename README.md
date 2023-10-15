@@ -12,3 +12,38 @@ It allows you to set tasks, assign performers and change their statuses.
 
 ### Try the project in work [HERE](https://task-manager-x2gg.onrender.com)
 
+***
+### How to install
+#### 1. Clone this repository
+```
+    git clone https://github.com/Boison88/python-project-52
+```
+
+#### 2. Change Directory
+```
+    cd python-project-52
+```
+
+#### 3. Create .env file with secret key
+```
+    make env
+```
+
+#### 4. Install poetry and required packages from pyproject.toml
+```
+    make install
+```
+
+#### 5. Migrate all models inside SQLite database
+```
+    make migration
+```
+
+#### 6. Run application
+```
+    # for dev and local use
+    make dev
+    
+    # for deploy
+    make start
+```

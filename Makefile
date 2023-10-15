@@ -5,14 +5,11 @@ check:
 	poetry check
 
 PORT ?= 8000
-local:
+dev:
 	poetry run python manage.py runserver 0.0.0.0:$(PORT)
 
 start:
 	poetry run gunicorn task_manager.wsgi
-
-shell:
-	poetry run python manage.py shell
 
 migration:
 	poetry run python manage.py makemigrations
@@ -21,7 +18,7 @@ migration:
 locale_up:
 	django-admin makemessages -l ru
 
-locale_comp:
+locale_compile:
 	django-admin compilemessages
 
 lint:
@@ -37,3 +34,6 @@ test-coverage:
 
 req:
 	poetry export --without-hashes --format=requirements.txt > requirements.txt
+
+env:
+	cp .env.example .env
