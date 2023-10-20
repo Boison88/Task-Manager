@@ -16,12 +16,12 @@ It allows you to set tasks, assign performers and change their statuses.
 ### How to install
 #### 1. Clone this repository
 ```
-    git clone https://github.com/Boison88/python-project-52
+    git clone https://github.com/Boison88/Task-Manager
 ```
 
 #### 2. Change Directory
 ```
-    cd python-project-52
+    cd Task-Manager
 ```
 
 #### 3. Create .env file with secret key
